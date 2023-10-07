@@ -1,0 +1,88 @@
+{
+	"name": "ink-text-input-wrong-cursor-handling-issue",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Demo for ink-text-input's wrong cursor handling issue",
+	"keywords": [
+		"case",
+		"cli",
+		"cursor",
+		"demo",
+		"handler",
+		"handling",
+		"ink",
+		"ink-text-input",
+		"issue",
+		"showcase"
+	],
+	"license": "MIT",
+	"author": "Rushan Alyautdinov <akgondber@gmail.com>",
+	"type": "module",
+	"bin": {
+		"ink-text-input-wrong-cursor-handling-issue": "dist/cli.js",
+		"itiwchi": "dist/cli.js",
+		"itiwch": "dist/cli.js",
+		"itiwc": "dist/cli.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "babel --out-dir=dist source",
+		"dev": "babel --out-dir=dist --watch source",
+		"play": "node dist/cli.js",
+		"prettify": "prettier . --write",
+		"test": "prettier --check . && xo && ava",
+		"xofix": "xo --fix"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-react"
+		]
+	},
+	"xo": {
+		"extends": "xo-react",
+		"prettier": true,
+		"rules": {
+			"react/prop-types": "off"
+		}
+	},
+	"prettier": "@vdemedes/prettier-config",
+	"ava": {
+		"environmentVariables": {
+			"NODE_NO_WARNINGS": "1"
+		},
+		"nodeArguments": [
+			"--loader=import-jsx"
+		]
+	},
+	"dependencies": {
+		"ink": "^4.4.1",
+		"ink-text-input": "^5.0.1",
+		"log-symbols": "^5.1.0",
+		"meow": "^12.1.1",
+		"range-stepper": "^1.6.0",
+		"react": "^18.2.0",
+		"semver": "^7.5.4",
+		"uuid": "^9.0.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.23.0",
+		"@babel/preset-react": "^7.22.15",
+		"@vdemedes/prettier-config": "^2.0.1",
+		"ava": "^5.2.0",
+		"chalk": "^5.3.0",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"import-jsx": "^5.0.0",
+		"ink-testing-library": "^3.0.0",
+		"prettier": "^3.0.3",
+		"xo": "^0.56.0"
+	},
+	"engines": {
+		"node": ">=16"
+	},
+	"repository": "https://github.com/akgondber/ink-text-input-wrong-cursor-handling-issue",
+	"homepage": "https://github.com/akgondber/ink-text-input-wrong-cursor-handling-issue#readme.md"
+}
